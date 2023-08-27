@@ -4,7 +4,7 @@ applications:
   instances: 1
   memory: 128M
   routes:
-    - route: product-list-ap2487.cfapps.eu10.hana.ondemand.com
+    - route: product-list-ap2487aarm.cfapps.us10-001.hana.ondemand.com
   path: myapp
   buildpacks:
     - nodejs_buildpack  
@@ -15,7 +15,7 @@ applications:
 # Application Router
 - name: approuter
   routes:
-    - route: approuter-product-list-ap2487.cfapps.eu10.hana.ondemand.com
+    - route: approuter-product-list-ap2487aarm.cfapps.us10-001.hana.ondemand.com
   path: approuter
   buildpacks:
     - nodejs_buildpack
@@ -26,6 +26,6 @@ applications:
     destinations: >
       [
         {"name":"products-destination",
-         "url":"https://product-list-ap2487.cfapps.eu10.hana.ondemand.com",
+         "url":"https://product-list-ap2487aarm.cfapps.us10-001.hana.ondemand.com",
          "forwardAuthToken": true}
       ]
